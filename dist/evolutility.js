@@ -4391,10 +4391,10 @@ Evol.ViewOne.Edit = Evol.View_One.extend({
             });
         _.each(fs, function(f){
             this.$(pref + f.id).select2(
-                {
+                _.extend({
                     data: f.list,
                     multiple:true
-                }
+                }, f.selectOptions)
             );
         });
     }
